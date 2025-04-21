@@ -1,0 +1,413 @@
+@charset "UTF-8";
+/* Define o conjunto de caracteres usado no CSS */
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa fontes externas do Google Fonts */
+
+
+
+
+
+/* Importa uma fonte personalizada chamada "Android" */
+@font-face {
+    font-family: 'Android'; 
+    src: url('idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+
+
+
+/* Declaração de variáveis CSS globais dentro da pseudo-classe :root */
+:root {
+
+
+    /* Paleta de cores */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+
+
+    /* Fontes padrão do projeto */
+    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --fonte-android: 'Android', 'cursive';
+}
+
+
+
+
+
+/* Reset de margens e espaçamentos para todos os elementos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+/* Estilização do corpo da página */
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrão);
+}
+
+
+
+
+
+/* Adiciona um ícone de link externo após links com a classe "externo" */
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+
+
+
+
+/* Estilização de parágrafos dentro da tag <main> */
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+
+
+
+
+/* Destaque com <strong> nos parágrafos de <main> */
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+
+
+
+
+/* Estilo para links dentro de <main> */
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+
+
+
+
+/* Efeito ao passar o mouse sobre links dentro de <main> */
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+
+
+
+
+/* Container para vídeos responsivos */
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+
+
+
+
+/* Deixa o vídeo ocupar 90% do espaço dentro do container responsivo */
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+
+
+
+/* Estilização do cabeçalho (header) */
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+
+
+
+/* Título principal no header */
+header > h1 {
+    font-family: var(--fonte-destaque);
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.541);
+}
+
+
+
+
+
+/* Parágrafo de descrição no header */
+header > p {
+    font-family: var(--fonte-padrão);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.541);
+}
+
+
+
+
+
+/* Menu de navegação */
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.644);
+}
+
+
+
+
+
+/* Links dentro do nav */
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+
+
+
+
+
+/* Efeito hover nos links do nav */
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+
+
+
+
+/* Conteúdo principal da página */
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.514);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+/* Título principal dos artigos */
+main > article > h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+
+
+
+
+
+/* Subtítulos dos artigos */
+main > article > h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    text-indent: 8px;
+}
+
+
+
+
+
+/* Todas as imagens dentro de <main> ocupam 100% da largura disponível */
+main img {
+    width: 100%;
+}
+
+
+
+
+
+/* Classe para imagens pequenas com centralização */
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+/* Área lateral (dica, curiosidade, etc.) */
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.493);
+}
+
+
+
+
+
+/* Título dentro do <aside> */
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+
+
+
+/* Lista dentro do <aside> com ícones e colunas */
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+
+
+
+
+/* Rodapé da página */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+
+
+
+
+/* Links no rodapé */
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Efeito ao passar o mouse sobre links do rodapé */
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+
+
+
+
+/*
+FONTES E TIPOGRAFIA
+font-family - Define o tipo de fonte
+font-weight - Define o peso (espessura) da fonte
+font-size - Define o tamanho da fonte, pode ser em px, em, % etc
+
+TAMANHOS E LARGURAS	
+max-widht - Define a largura máxima de um elemento
+min-widht - Define a largura mínima de um elemento
+min-height - Define a altura mínima de um elemento
+widht - Define a largura exata de um elemento
+height - Define a altura exata de um elemento
+
+TRANSIÇÕES E ANIMAÇÕES
+transition-duration - Define o tempo que uma transição leva para acontecer (ex: 0.5s, 1s)
+
+BORDAS E CANTOS ARREDONDADOS
+display - Define como o elemento será exibido, ex: block, inline, flex etc
+
+LISTAS
+list-style-type: Define o tipo de marcador em listas (disc, circle, square, none...).
+list-style-position: Define a posição dos marcadores (inside ou outside da margem).
+columns: Divide o conteúdo em múltiplas colunas (ex: columns: 2 cria duas colunas).
+
+ESPAÇAMENTO
+margin: Espaço externo ao redor do elemento.
+margin-bottom: Margem inferior do elemento.
+padding: Espaço interno, entre o conteúdo e a borda do elemento.
+padding-bottom: Preenchimento inferior.
+padding-top: Preenchimento superior.
+padding-right: Preenchimento direito.
+padding-left: Preenchimento esquerdo.
+
+ESTÉTICA
+box-shadow: Adiciona sombras ao redor de caixas (ex: 2px 2px 5px rgba(0,0,0,0.3)).
+background-color: Define a cor de fundo do elemento.
+background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)): Aplica um degradê vertical de cima para baixo, usando variáveis CSS --cor3 e --cor5.
+color: Define a cor do texto.
+
+OUTROS
+content: Usado em ::before ou ::after para inserir conteúdo via CSS.
+position: Define o tipo de posicionamento (ex: static, relative, absolute, fixed, sticky).
+top e left: Definem a posição vertical e horizontal de um elemento posicionado (position diferente de static).
+
+TEXTO
+text-align: Alinhamento do texto (left, center, right, justify).
+text-indent: Recuo da primeira linha de um parágrafo.
+line-height: altura entre linhas.
+text-decoration: Define decorações como underline, line-through, overline, none.
+text-shadow: Adiciona sombra ao texto (2px 2px 2px rgba(0,0,0,0.3)).
+
+FONTES PERSONALIZADAS
+src: url() format(): Usado com @font-face para carregar fontes personalizadas.
+url() aponta para o arquivo da fonte.
+format() define o formato, como 'opentype', 'truetype', 'woff', etc.
+*/
